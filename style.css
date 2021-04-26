@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+body {
+    margin: 0;
+}
+* {
+    font-family: 'Bitter', sans-serif;
+    font-weight: 500;
+}
+a {
+    text-decoration: none;
+}
+div.text .lk{
+    font-size: 20px;
+    margin-left: 10px;
+    color: #444444;
+    background-color: rgb(92, 141, 104);
+
+    padding: 8px;
+    margin-right: 10px;
+    float: right;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(99, 89, 89);
+}
+
+div.text img {
+    height: 80%;
+    margin-left: 30px;
+}
+
+div.text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+div.text .title{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 100px;
+    color: white;
+}
+.right{
+    width: 100%;
+    margin:0;
+    float: right;
+}
+#pages{
+    height: 100%;
+    width: 500px;
+    color: #c4c4c4;
+    font-size: 20px;
+    display: flex;
+    margin-left: 240px;
+}
+#pages a{
+    color: white;
+    height: 100%;
+    justify-content: center;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    margin-left: 20px;
+}
+div.lk {
+    font-size: 30px;
+    display: block;
+    align-items: right;
+    
+}
+div.lk a{
+    margin-left: 10px;
+    color: #444444;
+
+    
+    padding: 8px;
+    margin-right: 10px;
+}
+
+div.lk a:hover {
+    color: coral;
+}
+
+div.text .auth{
+    font-size: 20px;
+    margin-left: 10px;
+    color: #444444;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    margin-right: 10px;
+    float: right;
+}
+
+div.item .buy{
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #fccd2d;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+div.text a.auth.login{
+    padding: 8px 30px;
+
+}
+div.text a.lk.b{
+    padding: 8px 30px;
+   
+    border-color: #284d24;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+}
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    
+    background-color: rgb(196, 196, 196);
+    display: flex;
+    justify-content: space-around;
+}
+footer span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #444444;
+}
+
+form{
+    width: 500px;
+    /* height: 500px; */
+    background-color: rgb(101, 145, 119);
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 20px;
+}
+
+form.mini_form{
+    width: 400px;
+}
+
+form.mini_form select{
+    margin-bottom: 30px;
+}
+
+form input{
+    padding-left: 10px;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 45px;
+    border: none;
+    outline: none;
+}
+form input:focus {
+    color: #333;
+    border: 2px solid #436fea;
+}
+form label{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    opacity: 0.7;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+form button.form_auth_button{
+    display: block;
+    width: 80%;
+    margin: 20px auto 0;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+form button.form_button{
+    display: inline-block;
+    width: 49%;
+    height: 35px;
+    border: none;
+    margin: 20px auto 0 2px;
+    cursor: pointer;
+}
+form.mini_form button{
+    margin: 0 auto;
+}
+
+form select {
+    width: 82%;
+    display: block;
+    margin: 0 auto;
+    height: 45px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.data th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #42793d;
+    color: white;
+}
+.data td{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.data td,th{
+    width: 150px;
+    text-align: center;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: #444444;
+}
+.data tr {
+    border-color: #444444;
+}
+.data th:first-child {
+    border-top-left-radius: 10px;
+}
+.data th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+
+.data tr td:last-child {
+    border-right: none;
+}
+.ta-c{
+    text-align: center;
+}
+.block_11 tr td {
+    padding: 8px;
+}
+.block_11 td {
+    vertical-align: middle;
+}
+table{
+    margin-top: 16px;
+    border-spacing: 0;
+    text-align: center;
+}
+.block_13 {
+    border: 1px;
+    color: rgb(167, 108, 23);
+    font-size: 15px;
+    padding: 10px;
+    resize: none;
+}
+
+.require-field {
+    color: #F00;
+}
+.el {
+    float: left; /* говорим элементам выстраиваться один за другим */
+    width: 200px; /* устанавливаем ширину элемента */
+    padding: 10px; /* добавляем отступы с каждой стороны */
+    box-sizing: border-box; /* меняем способ вычисления ширины */
+    height: 320px;
+    background-color: #DDDDDD;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.el:hover {
+    box-shadow: 2px 2px #333333, 4px 4px #333333;
+    top: -4px;
+    left: -4px;
+}
+
+.el img {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    height: 250px;
+}
+
+.el span {
+    margin-top: 5px;
+	display: block;
+    text-align: center;
+}
+
+.item {
+    height: 500px;
+}
+.item img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: auto;
+    height: 100%;
+}
+
+.info {
+    margin-top: 40px;
+}
+strong {
+    font-weight: bold !important;
+}
