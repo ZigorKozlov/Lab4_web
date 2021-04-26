@@ -3,13 +3,13 @@
 require "Templates/header.php";
 require "DataBase/dataBase.php";
 ?>
-<h1 class="ta-c">Сотрудники</h1>
+<h1 class="ta-c">Группы</h1>
 <form action="#" method="post">
-	<select name="surname" size="1">
+	<select name="ageGroup" size="1">
 		<?
-		$queryRezult = mysqli_query($link, 'SELECT * FROM `employees` ORDER BY `Salary` ');
+		$queryRezult = mysqli_query($link, 'SELECT * FROM `agegroup`');
 		while ($result = mysqli_fetch_array($queryRezult, MYSQLI_ASSOC)) {
-			echo '<option value="'. $result['Surname'] .'">'. $result['Surname'] .'</option>';
+			echo '<option value="'. $result['Name_ag'] .'">'. $result['Name_ag'] .'</option>';
 		}
 		?>
 	</select><br>
@@ -17,41 +17,37 @@ require "DataBase/dataBase.php";
 	<button class="form_auth_button" type="submit" name="form_auth_unset">Отмена</button>
 </form>
 <?
-if(isset($_POST['form_auth_submit'])){
-	$queryRezult = mysqli_query($link, "SELECT * FROM `employees` WHERE `Surname`='" . $_POST['surname'] . "' ORDER BY `Salary` ");
+if(isset($_POST['form_auth_submit'])) {
+	$queryRezult = mysqli_query($link, "SELECT * FROM `groups` INNER JOIN `agegroup` ON `groups`.`ID_AgeGroup`=`agegroup`.`ID_AgeGroup` INNER JOIN `employees` ON `groups`.`ID_employee`=`employees`.`ID_employee` WHERE`agegroup`.`Name_ag`='" . $_POST['ageGroup'] . "'");
 } else {
-	$queryRezult = mysqli_query($link, 'SELECT * FROM `employees` ORDER BY `Salary` ');
+	$queryRezult = mysqli_query($link, "SELECT * FROM `groups` INNER JOIN `agegroup` ON `groups`.`ID_AgeGroup`=`agegroup`.`ID_AgeGroup` INNER JOIN `employees` ON `groups`.`ID_employee`=`employees`.`ID_employee`");
 }
 	echo '<table border="0" bordercolor="#444" class="data" align="center">';
 	echo '
 		<tr>
 			<th>
-				Фамилия
+				Название группы
 			</th>
 			<th>
-				Имя
+				Описание
 			</th>
 			<th>
-				Отчество
+				Возрастная группа
 			</th>
 			<th>
-				Должность
+				Имя воспитателя
 			</th>
-			
 			<th>
-				Фото
+				Фото воспитателя
 			</th>
 		</tr>
 	';
 	while ($result = mysqli_fetch_array($queryRezult, MYSQLI_ASSOC)){
 		echo "<tr><td>";
-		echo $result['Surname']."</td>";
-		echo "<td>" .$result['Name']."</td>";
-		echo "<td>" .$result['Patronymic']."</td>";
-		echo "<td>" .$result['Position']."</td>";
-		
-
-		
+		echo $result['Name_gr']."</td>";
+		echo "<td>" .$result['Description_gr']."</td>";
+		echo "<td>" .$result['Name_ag']."</td>";
+		echo "<td>" .$result['Name']."</td>";		
 		//ВЫвод изображения 
 		echo '<td>';
 		$image = imagecreatefromstring($result['Photo']); 

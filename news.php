@@ -8,7 +8,7 @@ require "DataBase/dataBase.php";
 
 	$sqlResult = mysqli_query($link, $sqlQuery);
 	
-	echo '<table border="1", align="center">';
+	echo '<table border="0" bordercolor="#444" class="data" align="center">';
 		echo '
 			<tr>
 				<th>
